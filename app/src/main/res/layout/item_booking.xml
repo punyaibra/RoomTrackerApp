@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_glass"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            
+            <TextView
+                android:id="@+id/tvBookingRoom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="Room Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"/>
+                
+            <TextView
+                android:id="@+id/tvBookingStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="PENDING"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textColor="@color/accent_blue"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBookingUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booked by: User Name"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvBookingDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date: 2023-10-27 | 10:00 - 12:00"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:layout_marginTop="8dp"/>
+            
+        <LinearLayout
+            android:id="@+id/layoutActionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+            
+            <Button
+                android:id="@+id/btnApprove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approve"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"/>
+                
+            <Button
+                android:id="@+id/btnReject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reject"
+                android:backgroundTint="@color/accent_pink"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

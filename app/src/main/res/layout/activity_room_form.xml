@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Room"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass"
+            android:padding="24dp"
+            android:elevation="4dp">
+
+            <!-- Room Image Section -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/ivRoomImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0"/>
+
+                <ImageView
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_input_add"
+                    android:background="@drawable/bg_button_rounded"
+                    android:padding="4dp"
+                    android:layout_gravity="bottom|end"
+                    android:contentDescription="Select Image"
+                    android:backgroundTint="#5856D6"
+                    android:tint="#FFFFFF"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/etRoomName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="isi nama ruangan"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input_field"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etBuilding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="nama gedung"
+                    android:background="@drawable/bg_input_field"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/etFloor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="isi lantai"
+                    android:inputType="number"
+                    android:background="@drawable/bg_input_field"
+                    android:padding="12dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="isi kapasitas"
+                android:inputType="number"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: 8x10 m"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etFacilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="isi fasilitas ruangan"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:minLines="2"
+                android:gravity="top|start"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="isi deskripsi"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:minLines="3"
+                android:gravity="top|start"/>
+
+            <Button
+                android:id="@+id/btnSaveRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Room"
+                android:backgroundTint="#5856D6"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

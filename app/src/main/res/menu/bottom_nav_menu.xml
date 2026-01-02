@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_rooms"
+        android:title="Ruangan" />
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_nav_search"
+        android:title="Cari" />
+    <item
+        android:id="@+id/nav_schedule"
+        android:icon="@drawable/ic_nav_booking"
+        android:title="Pemesanan" />
+    <item
+        android:id="@+id/nav_log"
+        android:icon="@drawable/ic_nav_log"
+        android:title="Riwayat" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="Akun" />
+</menu>

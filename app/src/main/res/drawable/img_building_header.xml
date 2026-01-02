@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="1080dp"
+    android:height="800dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="800">
+    
+    <!-- Sky Background -->
+    <path
+        android:pathData="M0,0h1080v800H0z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startY="0"
+                android:startX="540"
+                android:endY="800"
+                android:endX="540"
+                android:type="linear">
+                <item android:offset="0" android:color="#4285F4"/> 
+                <item android:offset="1" android:color="#E8F0FE"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Left Skyscraper (Angled up) -->
+    <path
+        android:fillColor="#1967D2"
+        android:pathData="M0,800 L0,200 L300,300 L300,800 z"/>
+    <path
+        android:fillColor="#1558B5"
+        android:pathData="M300,800 L300,300 L400,350 L400,800 z"/>
+        
+    <!-- Center Skyscraper (Tallest) -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M450,800 L450,100 L750,150 L750,800 z"/>
+    <!-- Windows -->
+    <path
+        android:fillColor="#669DF6"
+        android:pathData="M470,120 h260 v20 h-260 z M470,160 h260 v20 h-260 z M470,200 h260 v20 h-260 z M470,240 h260 v20 h-260 z M470,280 h260 v20 h-260 z"/>
+        
+    <!-- Right Skyscraper -->
+    <path
+        android:fillColor="#185ABC"
+        android:pathData="M800,800 L800,250 L1080,150 L1080,800 z"/>
+    
+    <!-- Clouds (Subtle) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.3"
+        android:pathData="M100,100 q50,-30 100,0 t100,0 t50,50 h-300 v-50 z"/>
+
+</vector>

@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.3' // Enforce gradle version matching app layer if needed, or just let it exist.
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

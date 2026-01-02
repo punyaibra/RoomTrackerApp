@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back,"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in now to continue"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ivIllustration"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/login_illustration"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="Login Illustration" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter your email address"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_edittext_rounded"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="12dp"
+            android:textColorHint="@color/input_hint"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/secondary_text"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edittext_rounded"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp"
+            android:drawablePadding="12dp"
+            android:drawableEnd="@drawable/ic_visibility_off"
+            android:textColorHint="@color/input_hint"/>
+
+        <!-- Additional Fields for Registration (Hidden by default) -->
+        <LinearLayout
+            android:id="@+id/layoutRegistrationFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Enter your full name"
+                android:inputType="textPersonName"
+                android:background="@drawable/bg_edittext_rounded"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:drawablePadding="12dp"
+                android:textColorHint="@color/input_hint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fakultas"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etFakultas"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Enter Fakultas"
+                android:inputType="text"
+                android:background="@drawable/bg_edittext_rounded"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:drawablePadding="12dp"
+                android:textColorHint="@color/input_hint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prodi"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etProdi"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Enter Study Program (Prodi)"
+                android:inputType="text"
+                android:background="@drawable/bg_edittext_rounded"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:drawablePadding="12dp"
+                android:textColorHint="@color/input_hint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Angkatan"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="10dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAngkatan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Enter Year (e.g., 2023)"
+                android:inputType="number"
+                android:background="@drawable/bg_edittext_rounded"
+                android:paddingHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="12dp"
+                android:textColorHint="@color/input_hint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KTM Photo"
+                android:textColor="@color/secondary_text"
+                android:layout_marginBottom="6dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                
+                <Button
+                    android:id="@+id/btnUploadKtm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Upload Image"
+                    android:background="@drawable/bg_button_rounded"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"/>
+
+                <ImageView
+                    android:id="@+id/ivKtmPreview"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:scaleType="centerCrop"
+                    android:padding="2dp"/>
+                
+                <TextView
+                    android:id="@+id/tvKtmStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No file selected"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Login"
+            android:background="@drawable/bg_button_rounded"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:minHeight="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_marginBottom="16dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="@color/secondary_text"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</ScrollView>

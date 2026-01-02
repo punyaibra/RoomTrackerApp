@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etDialogName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Full Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/etDialogEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email Address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/etDialogPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password (leave empty to keep)"/>
+
+        <!-- Role Selection could be added here or handled via existing dialog, 
+             but for 'Add' verification is needed. Let's keep it simple: Name/Email/Pass/Role -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <RadioGroup
+            android:id="@+id/rgDialogRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMIN"/>
+            <RadioButton
+                android:id="@+id/rbStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STAFF"/>
+            <RadioButton
+                android:id="@+id/rbMahasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAHASISWA"/>
+        </RadioGroup>
+
+        <!-- Student Specific Fields -->
+        <LinearLayout
+            android:id="@+id/layoutStudentFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fakultas"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/etDialogFakultas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fakultas"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Program Studi"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/etDialogProdi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Program Studi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Angkatan"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:id="@+id/etDialogAngkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Tahun Angkatan"/>
+                
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KTM Photo"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+            
+            <ImageView
+                android:id="@+id/ivKtmPreview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitCenter"
+                android:background="#EEEEEE"
+                android:src="@android:drawable/ic_menu_camera"/>
+
+            <Button
+                android:id="@+id/btnChangeKtm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload / Change Photo"
+                android:layout_gravity="center_horizontal"/>
+                
+            <!-- Hidden text view to store URI string if needed to verify -->
+            <TextView
+                android:id="@+id/tvKtmUri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

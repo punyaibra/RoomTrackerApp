@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/bg_table_row"
+    android:layout_marginBottom="4dp"
+    android:gravity="center_vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:id="@+id/ivRoomImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Room Name"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Location"
+        android:textColor="#757575"
+        android:textSize="13sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/tvRoomStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INACTIVE"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#D32F2F"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/ivAction"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:contentDescription="Action"
+        app:tint="#1A73E8"
+        android:padding="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+</LinearLayout>
